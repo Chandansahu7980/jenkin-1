@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Running build step..."
+                chmod +x app.sh
                 sh './app.sh'
             }
         }
