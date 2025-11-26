@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                echo "Cloning repository..."
+                echo "Dev Cloning repository..."
                 checkout scm
             }
         }
 
         stage('Build') {
             steps {
-                echo "Running build step..."
+                echo "Dev Running build step..."
                 sh 'chmod +x app.sh'
                 sh './app.sh'
             }
@@ -18,14 +18,14 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo "Running tests..."
-                sh 'echo "All tests passed!"'
+                echo "Dev Running tests..."
+                sh 'echo "Dev All tests passed!"'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Simulated deployment"
+                echo "Dev Simulated deployment"
             }
         }
     }
